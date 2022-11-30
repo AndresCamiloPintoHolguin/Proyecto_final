@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <!-- link bootstrap cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"></link>
+        <!-- fin de link bootstrap -->
+
+        <!-- link de estilos propios -->
+        <link href="CSS/CSS_Propiop.css" rel="stylesheet"></link>
+        <!-- fin del link css propio -->
+
+        <!-- link de cnd de iconos -->
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/fa3d9ebc07.js" crossorigin="anonymous"></script>
+        <!-- fin de link de iconos -->
+    </h:head>
+    <h:body>
+        <div class="d-flex" >
+            <div id="sidebar-container" class="bg-primary">
+
+
+                <!-- logo -->
+                <div style="position: relative;left: 40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow';" id="logo">
+                    <h4>CONNIE</h4>
+                </div>
+                <!-- fin logo -->
+
+
+                <!-- imagen logo -->
+                <div> <img style="border-radius: 25px; position: relative;left:40px " src="imagenes/icono connie.png" width="150px" height="150px" alt="alt"/></div>
+                <!-- fin imagen -->
+
+                <!-- link de menu derecho con estilos de fonts,tamaño,color -->
+                <div id="menu">
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_pqrs"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-user lead"></i>  Gestion de Usuarios</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure; text-decoration: none " outcome="/Gestion_de_ventas" ><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px; "><i class="fa-solid fa-money-bill-transfer lead"></i>  Gestion de ventas</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_inventario"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-cart-flatbed lead"></i>   Gestion de inventario</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_pqrs"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-chart-line lead"></i>    Gestion de PQRS</p></h:link>
+                </div>
+                <!-- fin de links -->
+
+            </div>
+            <!-- fin de menu derecho con sus respectivos objetos -->
+
+
+            <div class="container-fluid" >
+
+                <!-- container de sections -->
+                <div class="container-fluid border-bottom"  style="padding-bottom: 10px">
+                    <section class="py-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h1 class="font-weight-bold mb-0">Gestion de inventario </h1>
+                                    <p class="lead text-muted">revisa tu ultima informacion</p>
+                                </div>
+                                <div class="col-lg-3 container-fluid d-flex" >
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" style="background-color: rgb(8,4,62); width: 255px;align-self: center" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        crear nuevo registro
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">CREAR NUEVO PRODUCTO</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h:form >
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="form-floating">
+                                                                    <h:inputText value="#{controller.producto.nombre}" id="nombre" class="form-control"  />
+                                                                    <label for="nombre">NOMBRE</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+                                                                <div class="form-floating">
+                                                                    <h:inputText value="#{controller.producto.talla}" id="talla" class="form-control" />
+                                                                    <label for="talla">TALLA</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 mt-3">
+
+                                                                <div class="form-floating">
+                                                                    <h:inputText value="#{controller.producto.color}" id="color" class="form-control" />
+                                                                    <label for="color">COLOR</label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="col-12 mt-3">
+                                                                <div class="form-floating">
+                                                                    <h:inputText value="#{controller.producto.imagen}" id="imagen" class="form-control" />
+                                                                    <label for="imagen">IMAGEN</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12 mt-3">
+                                                                <div class="form-floating">
+                                                                    <h:inputText value="#{controller.producto.descripcion}" id="descripcion" class="form-control" />
+                                                                    <label for="descripcion">Descripcion</label>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="d-grid gap-2" style="padding-top: 15px">
+                                                                <h:form>
+                                                                    <h:commandButton action="#{controller.create()}" class="btn btn-primary" value="Guardar"></h:commandButton>
+                                                                    <p>#{controller.message}</p>
+                                                                </h:form>
+
+                                                            </div>
+
+
+                                                        </div>
+
+
+
+                                                    </h:form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+                <!-- finde container de sections -->
+
+
+                <!-- container de tabla  -->
+                <div class="col-12 border-top" style="padding-top: 15px;" >
+
+                    <h:dataTable id="tabla"  class="table table-secondary table-striped"  value="#{controller.getALLProducto()}" var="producto">
+                        <thead>
+
+                        </thead>
+                        <tbody>
+
+                            <h:column>
+                                <f:facet name="header">Id</f:facet>
+                                <h:outputText value="#{producto.idproducto}"></h:outputText>
+
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">NOMBRE</f:facet>
+                                <h:outputText value="#{producto.nombre}"> </h:outputText>
+                            </h:column>
+
+
+                            <h:column>
+                                <f:facet name="header">TALLA</f:facet>
+                                <h:outputText value="#{producto.talla}"></h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">COLOR</f:facet>
+                                <h:outputText value="#{producto.color}"></h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">IMAGEN</f:facet>
+                                <h:graphicImage value="#{producto.imagen}"></h:graphicImage>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">DESCRIPCION</f:facet>
+                                <h:outputText value="#{producto.descripcion}"></h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">OPCIONES</f:facet>
+                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Actualizar
+                                </button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel" >ACTUALIZAR PRODUCTO</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h:form >
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.idproducto}" id="id" class="form-control"  />
+                                                                <label for="id">ID</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.nombre}" id="nombre" class="form-control"  />
+                                                                <label for="nombre">NOMBRE</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.talla}" id="talla" class="form-control" />
+                                                                <label for="talla">TALLA</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 mt-3">
+
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.color}" id="color" class="form-control" />
+                                                                <label for="color">COLOR</label>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.imagen}" id="imagen" class="form-control" />
+                                                                <label for="imagen">IMAGEN</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 mt-3">
+                                                            <div class="form-floating">
+                                                                <h:inputText value="#{controller.producto.descripcion}" id="descripcion" class="form-control" />
+                                                                <label for="descripcion">Descripcion</label>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="d-grid gap-2" style="padding-top: 15px">
+                                                            <h:form>
+                                                                <h:commandButton action="#{controller.update(producto.idproducto)}" class="btn btn-warning" value="Guardar"></h:commandButton>
+                                                            </h:form>
+
+                                                            <p>#{controller.message}</p>
+                                                        </div>
+
+
+                                                    </div>
+
+
+
+                                                </h:form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <h:form style="padding-top: 10px">
+                                    <h:commandButton action="#{controller.eliminar(producto.idproducto)}" class="btn btn-danger" value="ELIMINAR"></h:commandButton>
+                                </h:form>
+
+                            </h:column>
+
+                        </tbody>
+                    </h:dataTable>
+
+                </div>
+                <!-- find container  -->
+
+            </div> 
+
+        </div>
+
+
+
+
+        <!-- scripts de bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <!-- fin de scripts -->
+        <!-- scrip de chartjs -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+        <script src="JS/chartJS.js"></script>
+        <!-- fin de script de chartjs -->
+        <!-- scripts de jquery -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+        <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+        <script>$(document).ready(function () {
+                $('#tabla').DataTable({
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ]
+                });
+            });</script>
+
+
+        <!-- fin de scripts jquery -->
+    </h:body>
+</html>
+

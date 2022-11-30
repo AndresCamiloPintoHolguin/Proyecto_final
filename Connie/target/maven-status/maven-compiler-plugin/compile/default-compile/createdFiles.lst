@@ -1,0 +1,5 @@
+services\AbstractFacade.class
+services\ProductoFacade.class
+model\Producto_.class
+controller\Controller.class
+model\Producto.class

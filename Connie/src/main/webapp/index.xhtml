@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      >
+    <h:head>
+        <title>Welcome to connie</title>
+
+        <!-- link bootstrap cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"></link>
+        <!-- fin de link bootstrap -->
+
+        <!-- link de estilos propios -->
+        <link href="CSS/CSS_Propiop.css" rel="stylesheet"></link>
+        <!-- fin del link css propio -->
+
+        <!-- link de cnd de iconos -->
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/fa3d9ebc07.js" crossorigin="anonymous"></script>
+        <!-- fin de link de iconos -->
+
+    </h:head>
+    <h:body>
+        <!-- comienzo de menu derecho con links imagenes -->
+        <div class="d-flex" >
+            <div id="sidebar-container" class="bg-primary">
+
+
+                <!-- logo -->
+                <div style="position: relative;left: 40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow';" id="logo">
+                    <h4>CONNIE</h4>
+                </div>
+                <!-- fin logo -->
+
+
+                <!-- imagen logo -->
+                <div> <img style="border-radius: 25px; position: relative;left:40px " src="imagenes/icono connie.png" width="150px" height="150px" alt="alt"/></div>
+                <!-- fin imagen -->
+
+                <!-- link de menu derecho con estilos de fonts,tamaño,color -->
+                <div id="menu">
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_pqrs"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-user lead"></i>  Gestion de Usuarios</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure; text-decoration: none " outcome="/Gestion_de_ventas" ><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px; "><i class="fa-solid fa-money-bill-transfer lead"></i>  Gestion de ventas</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_inventario"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-cart-flatbed lead"></i>   Gestion de inventario</p></h:link>
+                    <h:link class="d-block p-3" style="color: azure;text-decoration: none" outcome="/Gestion_de_pqrs"><p style="font-family:'Franklin Gothic Medium', 'Arial Narrow';font-size: 17px;"><i class="fa-solid fa-chart-line lead"></i>    Gestion de PQRS</p></h:link>
+                </div>
+                <!-- fin de links -->
+
+            </div>
+            <!-- fin de menu derecho con sus respectivos objetos -->
+
+            <!-- inicio de barra de busqueda-->
+            <div class="container-fluid" >
+                <nav class="navbar bg-light border-bottom ">
+
+                    <h:form class="d-flex position-relative  " role="search" style="padding-top: 15px;padding-left: 15px; ">
+                        <h:inputText class="form-control me-2 position-relative" style="border-radius: 5px;" value="buscar"></h:inputText>
+                        <button class="btn serh position-absolute" style="right: 0;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </h:form>
+
+                </nav>
+                <!-- fin de barra de busqueda -->
+                <!-- container de sections -->
+                <div class="container-fluid"  >
+                    <!-- comienzo de section de nombre y boton reeportes -->
+                    <section class="py-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-9">
+                                    <h1 class="font-weight-bold mb-0">Bienvenido Camilo </h1>
+                                    <p class="lead text-muted">revisa tu ultima informacion</p>
+                                </div>
+                                <div class="col-lg-3 container-fluid d-flex" >
+                                    <button  class="btn btn-primary " style="background-color: rgb(8,4,62); width: 255px;align-self: center">Descargar reportes</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </section>
+                    <!-- fin de section de nombre y boton de reportes -->
+                    <!-- comienzo de section de reportes  -->
+                    <section>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md6 muro my-3 d-flex">
+                                        <div class="mx-auto"> 
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="font-weight-bold">50,000</h3>
+                                            <h6 class="text-success"><i class="fa-solid fa-percent"></i>50.50</h6> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md6 muro my-3 d-flex">
+                                        <div class="mx-auto"> 
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="font-weight-bold">50,000</h3>
+                                            <h6 class="text-success"><i class="fa-solid fa-percent"></i>50.50</h6> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md6  muro my-3 d-flex">
+                                        <div class="mx-auto"> 
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="font-weight-bold">50,000</h3>
+                                            <h6 class="text-success"><i class="fa-solid fa-percent"></i>50.50</h6> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md6  my-3 d-flex">
+                                        <div class="mx-auto"> 
+                                            <h6 class="text-muted">Ingresos Mensuales</h6>
+                                            <h3 class="font-weight-bold">50,000</h3>
+                                            <h6 class="text-success"><i class="fa-solid fa-percent"></i>50.50</h6> 
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                    </section>
+                    <!-- fin de section de reportes -->
+                    <!-- section de grafica y ventas  -->
+                    <section class="bg-grey">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-8 pt-2">
+                                    <div class="card">
+                                        <div class="card-header bg-light border-bottom ">
+                                            <h6 style="font-size: 25px" class="font-weight-bold mb-0"> Ultimas ventas del mes </h6>
+                                        </div>
+                                        <div class="card-body bg-light" >
+                                            <canvas id="grafica"></canvas> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 my-4">
+                                    <div class="card rouded-0">
+                                        <div class="card-header bg-light">
+                                            <h6 class="font-wight-bold mb-0">Ventas recientes</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="d-flex border-bottom py-2">
+                                                <div></div>
+                                                <div >
+                                                    <h3><i class="fa-solid fa-tag"></i>$2.500 </h3>
+                                                    <span>Crop top talla (M)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-bottom py-2">
+                                                <div></div>
+                                                <div >
+                                                    <h3><i class="fa-solid fa-tag"></i>$2.500 </h3>
+                                                    <span>Crop top talla (M)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-bottom py-2">
+                                                <div></div>
+                                                <div >
+                                                    <h3><i class="fa-solid fa-tag"></i>$2.500 </h3>
+                                                    <span>Crop top talla (M)</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex border-bottom py-2">
+                                                <div></div>
+                                                <div >
+                                                    <h3><i class="fa-solid fa-tag"></i>$2.500 </h3>
+                                                    <span>Crop top talla (M)</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="d-grid gap-1">
+                                                <button id="botonreporte" class="btn btn-primary" type="button">Ver todas las compras</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </section>
+
+                </div>
+
+                <!-- fin de containers section -->
+            </div>
+
+
+        </div>
+        <!-- fin menu -->
+
+
+
+
+
+    </h:body>
+
+    <!-- scripts de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- fin de scripts -->
+    <!-- scrip de chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+    <!-- fin de script de chartjs -->
+    <script src="JS/chartJS.js"></script>
+
+</html>
+

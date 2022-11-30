@@ -1,0 +1,117 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8/11/2022, 03:00:59 PM
+    Author     : camil
+*/
+
+
+
+
+body{
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    color:rgb(8,4,62);
+}
+
+#sidebar-container{
+    
+    min-height: 100vh;
+   width: 40vh;
+}
+
+
+
+#sidebar-container .menu{
+    
+    width: 18rem;
+}
+
+#img{
+    
+    border-radius: 25px;
+    width: 15px
+}
+.img{
+    position: relative;
+    left: 40px;
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+}
+
+h4{
+    padding-left: 20px;
+    padding-top: 15px;
+    color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+    font-size: 30px;
+}
+
+.bg-primary{
+    background-color: #111b54 !important;
+}
+
+
+.bg-light{
+    
+    background-color: #ffffff !important ;
+}
+#buscar{
+    
+    border-radius: 5px !important;
+}
+
+.serh{
+    
+  right: 0;
+}
+
+#content{
+    
+    overflow-y: auto;
+    width: 100vh;
+    height: 100vh;
+    padding-bottom: 5rem;
+}
+
+.btn-primary{
+    
+    background-color:  #111b54 !important ;
+    
+}
+.btn{
+    
+    border: 0;
+}
+.btn-primary:hover{
+    background-color:  #111b54;
+    
+}
+
+.muro{
+    
+    
+    border-right: 1px solid grey;
+    
+}
+
+
+.bg-grey{
+    
+ background-color: #efefef !important;
+}
+
+h6{
+    
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+}
+
+@media (max-width:768px){
+    #sidebar-container{
+        display: none !important; 
+    }
+}
+
